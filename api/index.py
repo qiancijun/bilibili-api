@@ -8,7 +8,7 @@ DEFAULT_HEADERS = {
     "Referer": "https://www.bilibili.com/"
 }
 
-class Handler(BaseHTTPRequestHandler):
+class handler(BaseHTTPRequestHandler):
     def do_GET(self):        
         url_parts = urlparse(self.path)
         query_params = parse_qs(url_parts.query)
